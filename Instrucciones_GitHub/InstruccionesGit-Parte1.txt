@@ -1,0 +1,30 @@
+- Establecer conexión con repositorio web:
+1. Crear una carpeta en una ubicación de interés
+2. Abrir la consola, o la terminal
+3. Acceder a la ubicación del repositorio local
+	cd <ubicación>	(change directory, cambio de directorio)
+	cd C:\Users\juand\Desktop\Cuero (ejemplo)
+4. Inicializar repositorio
+	git init
+5. Establecer conexión con el repositorio web
+	git remote add origin <url_repositorio>
+	git remote add origin https://github.com/MillerSamqC/Project-CoWorkPlace.git
+6. Verificar conexión
+	git remote -v
+
+- Subir contenido
+1. Abrir la consola, o la terminal
+2. Acceder a la ubicación del repositorio local
+	cd <ubicación>	(change directory, cambio de directorio)
+	cd C:\Users\juand\Desktop\Cuero (ejemplo)
+3. (opcional) Verificar diferencia entre repositorio web y local
+	git status
+4. Especificar los archivos a subir
+	git add <nombre_archivo>
+	git add . (añadir todos los archivos nuevos, "rojos")
+5. Especifica comentario de subida (obligatorio)
+	git commit -m "comentario..."
+6. Subir los archivos
+	git push origin master
+	
+ 
