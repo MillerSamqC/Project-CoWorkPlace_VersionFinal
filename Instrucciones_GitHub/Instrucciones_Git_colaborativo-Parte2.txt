@@ -1,0 +1,37 @@
+Ecommerce cuero: Uno de los tres será dueño del oficial
+
+La rama principal del proyecto se conoce como "master" o "main"
+
+	1. Usuarios						-> Dueño oficial. Utilizará los comandos: git push origin master
+								   git pull origin master
+	2. Productos						-> Crea una rama de su trabajo individual: "Productos". Empleará comandos como:
+								   git push fork Productos, git pull origin master (contenido grupal)
+								   git pull fork Productos (contenido individual para trabajar en otro equipo)
+	3. Ventas (acoplamiento con pasarela de pagos)		-> Crea una rama de su trabajo individual: "Ventas". Empleará comandos como:
+								   git push fork Ventas, git pull origin master
+
+
+Ramas:
+
+1. Master o main -> rama principal del proyecto original o de las copias.
+2. Ramas de trabajo individual.
+
+
+URL:
+
+1. origin 		-> describir la dirección del repositorio oficial.
+2. copia (fork)		-> dirección de la copia del proyecto.
+
+
+
+¿Se actualiza automáticamente? -> No
+
+¿Cómo actualizar un repositorio web o local?
+
+Repositorio web -> (git status -> Evalúa las diferencias entre local y web) se emplea el comando "push" para actualizar el web
+
+Repositorio local -> se actualiza a través del comando "pull"
+
+"Push" (empujar)	-> enviar contenido al repositorio web
+
+"Pull" (jalar)		-> Importar contenido al repositorio local
