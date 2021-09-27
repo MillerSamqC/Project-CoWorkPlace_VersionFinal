@@ -1,3 +1,6 @@
+![Screenshot](/image/cwp.png)
+
+
 <div align="center">
 	<h1 style="color:Tomato;"><strong>Project CoWorkPlace</strong></h1>
 	<strong>Hecho por:</strong> Diana Carolina Valbuena Delgado<br>
