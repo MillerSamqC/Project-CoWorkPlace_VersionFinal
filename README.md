@@ -1,4 +1,4 @@
-![Screenshot](/image/cwp.png)
+<img src="/image/cwp.png" alt="Logo CoWorkPlace", align ="center"/>
 
 
 <div align="center">
