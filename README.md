@@ -1,4 +1,4 @@
-<img src="/image/cwp.png" alt="Logo CoWorkPlace", align ="center"/>
+<img src="/image/cwp.png" alt="Logo CoWorkPlace" align ="center"/>
 
 
 <div align="center">
