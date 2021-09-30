@@ -6,7 +6,6 @@
 	<h1 style="color:Tomato;"><strong>Project CoWorkPlace</strong></h1>
 	<strong>Hecho por:</strong> Diana Carolina Valbuena Delgado<br>
   Gilson Dukquerio Aranda Ciprian<br>
-  Hoover Orlando Aragon Villanueva<br>
   Ferney Francisco Roa Huertas<br>
   Miller Alexander Quiroga Campos<br>
 </div>
