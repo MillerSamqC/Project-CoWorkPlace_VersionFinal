@@ -17,4 +17,4 @@ CoWorkPlace nace de la necesidad de muchas de las empresas que se vieron obligad
 
 El backend de CoWorkPlace se representa mediante el siguiente diagrama UML:
 
-<div align="center"><img src="/image/UML.jpg" alt="DiagramaUML"></div>
+<div align="center"><img src="/image/UML.jpeg" alt="DiagramaUML"></div>
