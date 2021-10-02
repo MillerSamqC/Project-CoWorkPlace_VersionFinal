@@ -2,6 +2,31 @@ from django.shortcuts import render
 #Para imprimir mensajes sencillos de respuesta se importa la siguiente libreria:
 from django.http import HttpResponse
 
+
+
+from rest_framework import viewsets
+
+from Catalogo.serializers import LocacionSerial, Locacion, TipoLugarSerial, TipoLugar, LugarSerial, Lugar
+
+
+class LocacionAPI(viewsets.ModelViewSet):
+    serializer_class = LocacionSerial
+    queryset = Locacion.objects.all()
+
+
+class TipoLugarAPI(viewsets.ModelViewSet):
+    serializer_class = TipoLugarSerial
+    queryset = TipoLugar.objects.all()
+
+
+class LugarAPI(viewsets.ModelViewSet):
+    serializer_class = LugarSerial
+    queryset = Lugar.objects.all()
+
+
+
+
+
 # Create your views here.
 
 def vistaEjemplo(request):
