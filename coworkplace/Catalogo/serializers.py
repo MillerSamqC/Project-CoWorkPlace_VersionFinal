@@ -16,8 +16,3 @@ class LugarSerial(serializers.ModelSerializer):
     class Meta:
         model = Lugar
         fields = '__all__'
-
-class TipoLugarSerial(serializers.ModelSerializer):
-    class Meta:
-        model = TipoLugar
-        fields = '__all__'
