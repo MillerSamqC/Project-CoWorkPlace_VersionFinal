@@ -31,7 +31,7 @@ class Lugar(models.Model):
     Disponible = models.BooleanField(blank = True, null=True)
 
     def __str__(self):
-        return self.Capacidad
+        return str(self.Capacidad)
 
     def CalcularDisponibilidad(self, Reserva):
         disponibilidad = 0
