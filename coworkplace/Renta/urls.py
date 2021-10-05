@@ -4,8 +4,8 @@ from Renta.views import *                           #MEL
 
 #CATALOGO - Aplicacion
 router = DefaultRouter()
-router.register =('reservas', ReservaAPI)        #MEL no hay API's aún, por ULM será ReservaAPI
-router.register =('pagos', PagoAPI)              #MEL no hay API's aún, por ULM será PagoAPI
+router.register('reservas', ReservaAPI, basename="Reserva")        #MEL no hay API's aún, por ULM será ReservaAPI
+router.register('pagos', PagoAPI, basename="Pago")              #MEL no hay API's aún, por ULM será PagoAPI
 
 urlpatterns = [
     #path('ejemplo', vistaEjemplo),

@@ -4,8 +4,8 @@ from Usuarios.views import *                        #MEL
 
 #CATALOGO - Aplicacion
 router = DefaultRouter()
-router.register =('perfiles', PerfilAPI)             #MEL no hay API's aún, por ULM será PerfilAPI
-router.register =('tipo_usuarios', TipoUsuarioAPI)   #MEL no hay API's aún, por ULM será Tipo_usuarioAPI
+router.register('perfiles', PerfilAPI, basename="Perfil")             #MEL no hay API's aún, por ULM será PerfilAPI
+router.register('tipo_usuarios', TipoUsuarioAPI, basename="TipoUsuario")   #MEL no hay API's aún, por ULM será Tipo_usuarioAPI
 
 urlpatterns = [
     #path('ejemplo', vistaEjemplo),

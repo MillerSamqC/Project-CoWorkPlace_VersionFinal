@@ -5,9 +5,9 @@ from Catalogo.views import *
 
 #CATALOGO - Aplicacion
 router = DefaultRouter()
-router.register =('locaciones', LocacionAPI)        
-router.register =('lugares', LugarAPI)              
-router.register =('tipo_lugares', TipoLugarAPI)     
+router.register('locaciones', LocacionAPI, basename="locaciones")        
+router.register('lugares', LugarAPI, basename="lugares")              
+router.register('tipo_lugares', TipoLugarAPI, basename="tipo_lugares")     
 
 urlpatterns = [
     #path('ejemplo', vistaEjemplo),
