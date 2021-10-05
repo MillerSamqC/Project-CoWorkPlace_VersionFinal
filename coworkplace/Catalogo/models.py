@@ -21,17 +21,21 @@ class TipoLugar(models.Model):
     nombre = models.CharField(max_length=100)
     imagen = models.ImageField(blank = True, null=True)
 
+    def __str__(self):
+        return self.nombre
+
 #Clase para los lugares
 class Lugar(models.Model):
     IdLocacion = models.ForeignKey(Locacion, on_delete=models.CASCADE)
     idTipoLugar = models.ForeignKey(TipoLugar, on_delete=models.CASCADE)
     Capacidad = models.IntegerField(blank = True, null=True)
-    Servicios_Adicionales = models.CharField(max_length=500)
+    Servicios_Adicionales = models.CharField(max_length=500, blank=True, null=True)
     Precio = models.FloatField()
     Disponible = models.BooleanField(blank = True, null=True)
+    num_lugar = models.IntegerField(default=0)
 
     def __str__(self):
-        return str(self.Capacidad)
+        return self.IdLocacion.Nombre + ' - ' + self.idTipoLugar.nombre + ' - ' + str(self.num_lugar)
 
     def CalcularDisponibilidad(self, Reserva):
         disponibilidad = 0
