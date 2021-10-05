@@ -1,49 +1,60 @@
+/*  Margenes a toda la página   */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*  Tipografía para la página   */
 body {
     font-family: 'open sans';
 }
 
+/*  Espacion entre secciones    */
 .contenedor {
     padding: 60px 0;
     width: 90%;
     max-width: 1000px;
-    margin: auto;
+    margin: auto; /*Centrado*/
     overflow: hidden;
 }
 
+/*  Títulos  */
+
 .titulo {
-    color: #642a73;
+    color: #a70404;
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
 }
 
-/* Header */
+/* Header - Cabecera */
 
 header {
     width: 100%;
     height: 600px;
-    background: #bc4e9c;
+    background: #e60606;
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, hsla(239, 87%, 49%, 0.459), hsla(125, 77%, 67%, 0.664)), url(../img/portada.jpg);
+    background: -webkit-linear-gradient(to right, hsla(62, 22%, 35%, 0.459), hsla(0, 94%, 51%, 0.664)), url(../img/portada.jpg);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(239, 87%, 49%, 0.459), hsla(125, 77%, 67%, 0.664)), url(../img/portada1.jpg);
+    background: linear-gradient(to right, hsla(62, 22%, 35%, 0.459), hsla(0, 94%, 51%, 0.664)), url(../img/portada1.jpg);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
     position: relative;
 }
 
+/* Barra de menú */
 nav {
     text-align: right;
     padding: 30px 50px 0 0;
 }
 
+.logo {
+    margin-left: 35px;
+}
+
+/* Elementos - barra de menú */
 nav > a{
     color:#fff;
     font-weight: 300;
@@ -51,10 +62,13 @@ nav > a{
     margin-right: 10px;
 }
 
+/* Elementos : hover - barra de menú */
 nav > a:hover{
     text-decoration: underline;
+    color: rgb(95, 0, 0);
 }
 
+/* Titulo de la cabecera */
 header .textos-header{
     display: flex;
     height: 430px;
@@ -70,12 +84,13 @@ header .textos-header{
     color:#fff;
 }
 
-.textos-header h2{
-    font-size: 30px;
+.textos-header h3{
+    font-size: 20px;
     font-weight: 300;
     color:#fff;
 }
 
+/* OLA - wave */
 .wave{
     position: absolute;
     bottom: 0;
@@ -104,8 +119,9 @@ main .sobre-nosotros{
     margin-bottom: 15px;
 }
 
+/* Nuestro servicios */
 .contenido-textos h3 span{
-    background: #4d0686;
+    background: #dd1616;
     color: #fff;
     border-radius: 50%;
     display: inline-block;
@@ -117,6 +133,7 @@ main .sobre-nosotros{
     margin-right: 5px;
 }
 
+/* Contenido nuestros productos */
 .contenido-textos p{
     padding: 0px 0px 30px 15px;
     font-weight: 300;
@@ -124,18 +141,18 @@ main .sobre-nosotros{
 }
 
 /* Galeria */
-
-
 .portafolio{
     background: #f2f2f2;
 }
 
+/* Galeria - Imagenes*/
 .galeria-port{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
+/* Galeria - Imagenes*/
 .imagen-port{
     width: 24%;
     margin-bottom: 10px;
@@ -145,6 +162,7 @@ main .sobre-nosotros{
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
 }
 
+/* Cuadricula Galeria de imagenes*/
 .imagen-port > img{
     width: 100%;
     height: 100%;
@@ -152,13 +170,14 @@ main .sobre-nosotros{
     display: block;
 }
 
+/* Hover: Galeria - Imagenes*/
 .hover-galeria{
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     transform: scale(0);
-    background: hsla(273,91%,27%, 0.7);
+    background: rgba(122, 37, 37, 0.7);
     transition: transform .5s;
     display: flex;
     justify-content: center;
@@ -178,7 +197,7 @@ main .sobre-nosotros{
     transform: scale(1);
 }
 
-/* Clients */
+/* Comentarios de Clientes */
 
 .cards{
     display: flex;
@@ -186,7 +205,7 @@ main .sobre-nosotros{
 }
 
 .cards .card{
-    background: #4d0686;
+    background: #db3c3c;
     display: flex;
     width: 46%;
     height: 200px;
@@ -215,7 +234,7 @@ main .sobre-nosotros{
     padding-top: 5px;
 }
 
-/*  Our team */
+/*  Nuestros servicios */
 
 .about-services{
     background: #f2f2f2;
@@ -235,7 +254,7 @@ main .sobre-nosotros{
 }
 
 .servicio-ind img{
-    width: 90%;
+    width: 40%;
 }
 
 .servicio-ind h3{
@@ -243,8 +262,8 @@ main .sobre-nosotros{
 }
 
 .servicio-ind p{
-    font-weight: 300;
-    text-align: justify;
+    font-weig   ht: 300;
+    text-align: center;
 }
 
 /* footer */
@@ -271,7 +290,7 @@ footer{
 
 .content-foo h4{
     color: #fff;
-    border-bottom: 3px solid #af20d3;
+    border-bottom: 3px solid #e43636;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -282,11 +301,12 @@ footer{
 
 .titulo-final{
     text-align: center;
-    font-size: 24px;
+    font-size: 15px;
     margin: 20px 0 0 0;
     color: #9e9797;
 }
 
+/* response para tablets */
 @media screen and (max-width:900px){
     header{
         background-position: center;
@@ -349,6 +369,8 @@ footer{
     }
 }
 
+
+/* response para celulares */
 @media screen and (max-width:500px){
     nav{
         text-align: center;
@@ -367,7 +389,7 @@ footer{
         font-size: 20px;
     }
 
-    /* ABOUT US */
+    /* Acerca de nosotros */
 
     .imagen-about-us{
         margin-bottom: 60px;
@@ -384,7 +406,7 @@ footer{
         width: 95%;
     }
 
-    /* Clients */
+    /* Clientes */
 
     .cards .card{
         height: 450px;
@@ -398,7 +420,7 @@ footer{
         height: 90px;
     }
 
-    /* Footer */
+    /* footer */
 
     .contenedor-footer{
         flex-direction: column;
