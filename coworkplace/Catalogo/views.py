@@ -1,13 +1,14 @@
+from decimal import localcontext
 from django.shortcuts import render
 #Para imprimir mensajes sencillos de respuesta se importa la siguiente libreria:
 from django.http import HttpResponse
-
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST
 from django.shortcuts import get_object_or_404
-
-from Catalogo.serializers import LocacionSerial, Locacion, TipoLugarSerial, TipoLugar, LugarSerial, Lugar
+from rest_framework.utils.serializer_helpers import ReturnDict
+#from Catalogo.serializers import LocacionSerial, Locacion, TipoLugarSerial, TipoLugar, LugarSerial, Lugar
+from Catalogo.serializers import *
 
 
 class LocacionAPI(viewsets.ModelViewSet):
@@ -26,8 +27,12 @@ class LugarAPI(viewsets.ViewSet):
         return Response(serializador.data)
 
     def create(self, request):
-        #lugar = Lugar.objects.all()
-        #serializador = LugarSerial(data =  request.data)
+        ubicacion = Locacion.objects.get(id = request.data['IdLocacion'])
+        ubicacionSerial = LocacionSerial(ubicacion)
+        if (request.data['idTipoLugar'] == 1): #Si es un puesto individual, almacena la capacidad máxima de los puestos individuales
+            LimitePuestos = ubicacionSerial.data['Capacidad_Individual']
+        else: #Si es una sala, almacena la capacidad máxima de las salas
+            LimitePuestos = ubicacionSerial.data['Capacidad_Salas']       
         locaciones = get_object_or_404(Locacion, id = request.data['IdLocacion'])
         tipo = get_object_or_404(TipoLugar, id = request.data['idTipoLugar'])
         lugar = Lugar.objects.filter(IdLocacion = locaciones, idTipoLugar = tipo)
@@ -35,11 +40,12 @@ class LugarAPI(viewsets.ViewSet):
         request.data['num_lugar'] = numlugar + 1
         serializador = LugarSerial(data = request.data)
         if serializador.is_valid():
-            serializador.save()
-            return Response("El lugar se guardó exitosamente")
-        #data = request.data
+            if (numlugar < LimitePuestos):
+                serializador.save()
+                return Response("El lugar se guardó exitosamente")
+            else:
+                return Response("No es posible crear el puesto, se ha alcanzado el límite máximo")
         return Response(serializador.errors)
-        #carrito = CarritoCompras.objects.filter(usuario=pk)
 
     def retrieve(self, request, pk=None):
         # *** pk = 2-3 -> pk1-pk2 / se pasará la llave de manera compuesta ***
