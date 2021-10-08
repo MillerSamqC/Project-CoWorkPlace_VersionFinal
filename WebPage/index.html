@@ -5,36 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Miller Alexander Quiroga Campos">
+    <meta name="description" content="Alquiler de espacios de trabajo">
+    <meta name="keywords" content="coworking, alquiler, espacios trabajo, comodidad">
     <title>CoWorkPlace</title>
     <link rel="shortcut icon" href="img/Logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
     <!-- Fuente de Googlefonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
 </head>
+<!-- Modal de Iniciar Sesión-->
+<div class="modal modal-signin" tabindex="-1" role="dialog" id="modalSignin" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content rounded-5 shadow">
+            <div class="modal-header p-5 pb-4 border-bottom-0">
+                <!-- <h5 class="modal-title">Modal title</h5> -->
+                <h2 class="fw-bold mb-0">Inicio de Sesión</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
 
+            <div class="modal-body p-5 pt-0">
+                <form class="">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control rounded-4" id="floatingInput" placeholder="usuario">
+                        <label for="floatingInput">Usuario</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="password" class="form-control rounded-4" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Contraseña</label>
+                    </div>
+                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Inicia sesión</button>
+                    <small class="text-muted">Dando clic en Inicia sesión, usted acepta los términos de uso.</small>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 <body>
     <header>
         <nav> <!-- Barra de menú-->
             <img class="logo" src="img/LogoXx.png" alt="logo" width="30%" align="left">            
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Portafolio</a>
-            <a href="#">Renta</a>
-            <a href="#">Inicia Sesion</a>
-            <a href="#">Contactenos</a>
+            <a href="index.html">Inicio</a>
+            <a href="reserva.html">Reserva</a>
+            <a href="acerca_de.html">Acerca de</a>
+            <a href="contactenos.html">Contactenos</a>
+            <a href="sesion.html" data-bs-toggle="modal" data-bs-target="#modalSignin">Inicia Sesion</a>
+            <a href="#">Registrate</a>
         </nav>
         <section class="textos-header">
             <h1>CoWorkPlace</h1>
             <h3>Otra forma de trabajar</h3>
-        </section>
-        
+            <br><br><br><br><br>
+        </section>       
 
         <!-- Curva de la ola (Wave) -> https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections-->
         <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
                 style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
                     style="stroke: none; fill: #fff;"></path>
-            </svg></div>
+            </svg>
+        </div>               
     </header>
     <main> <!-- Creamos la oferta de coWork -->
         <section class="contenedor sobre-nosotros">
@@ -168,7 +202,9 @@
         <div class="contenedor-footer">
             <div class="content-foo">
                 <h4>Phone</h4>
-                <p>1231234</p>
+                <p>601 543 1000 <br>
+                601 788 1000 <br>
+                601 599 1000</p>
             </div>
             <div class="content-foo">
                 <h4>Contactos</h4>
@@ -184,7 +220,11 @@
             </div>
             <div class="content-foo">
                 <h4>Location</h4>
-                <p>Av Dorado Av Medellin</p>
+                <p>Sede Norte - Chico <br> 
+                    Sede Centro - Centro Internacional <br> 
+                    Sede Occidente - Avenida Dorado
+                </p>
+
             </div>
         </div>
         <h4 class="titulo-final">&copy;MaqC</h4>
