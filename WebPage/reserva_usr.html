@@ -73,38 +73,48 @@
     </header>
     <main>
         <!-- Creamos la oferta de coWork -->
-        <section class="contenedor">
-            <h2 class="titulo">Registrate</h2>
-            <div>
-                <form action="#" method="post">
-                    <div class="input-group mb-3 ">
-                        <span class="input-group-text">Nombre Completo</span>
-                        <input type="text" aria-label="First name" class="form-control" placeholder="Nombres ">
-                        <input type="text " aria-label="Last name " class="form-control" placeholder="Apellidos">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Correo electrónico</span>
-                        <input type="email" aria-label="Email" class="form-control" placeholder="Correo electrónico ">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Usuario</span>
-                        <input type="text" aria-label="Username" class="form-control" placeholder="Usuario ">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Contraseña</span>
-                        <input type="password" aria-label="Password" class="form-control" placeholder="Contraseña ">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Dirección</span>
-                        <input type="text" aria-label="Address" class="form-control" placeholder="Dirección ">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text">Teléfono</span>
-                        <input type="phone" aria-label="Phone number" class="form-control" placeholder="Teléfono ">
-                    </div>
-                    <button type="button submit" class="btn btn-primary">Enviar Registro</button>
-                </form>
-            </div>
+        <section class=" contenedor container-fluid">
+            <h2 class="titulo">Usuario: <strong>Camila Riaño</strong></h2>
+            <table class="table caption-top">
+                <caption>Lista de reservas</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Lugar</th>
+                        <th scope="col">Fecha inicio reserva</th>
+                        <th scope="col">Fecha final reserva</th>
+                        <th scope="col">Pago</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>CoWork Norte - Puesto 2</td>
+                        <td>2021-10-07</td>
+                        <td>2021-10-08</td>
+                        <td>
+                            <Button class="btn btn-primary">PAGAR</Button>
+                        </td>
+                        <td>Activo</td>
+                        <td>
+                            <Button class="btn btn-secondary">Modificar</Button>&nbsp; <button class="btn btn-danger">Cancelar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>CoWork Norte - Sala 1</td>
+                        <td>2021-11-12</td>
+                        <td>2021-11-14</td>
+                        <td><button class="btn btn-primary" disabled="disabled">PAGADO</button></td>
+                        <td>Activo</td>
+                        <td>
+                            <Button class="btn btn-secondary" disabled="disabled">Modificar</Button>&nbsp; <button class="btn btn-danger">Cancelar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </section>
     </main>
     <footer>
