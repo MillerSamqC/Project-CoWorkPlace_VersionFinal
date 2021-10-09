@@ -1,0 +1,27 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<main> <!-- Creamos la oferta de coWork -->
+    <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Contáctenos</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="{% static 'img/ilustracion4.svg'%}" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1 </span>  Telefonos y dirección</h3>
+                <p>601 543 1000 <br>
+                    601 788 1000 <br>
+                    601 599 1000 <br>
+                    Sede Norte - Chico <br> 
+                    Sede Centro - Centro Internacional <br> 
+                    Sede Occidente - Avenida Dorado
+                </p>
+                <h3><span>2 </span>  Ubicación</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d77794.03926382642!2d-74.0398100229657!3d4.6395049557559975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x8e3f909f7843f749%3A0x80596b4960fd35e8!2sSouth%20America!3m2!1d4.6461505999999995!2d-74.026961!5e0!3m2!1sen!2sco!4v1633651328836!5m2!1sen!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    
+</main>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<main> <!-- Creamos la oferta de coWork -->
+    <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Acerca de CoWorkPlace</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="{% static 'img/ilustracion2.svg'%}" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>* </span>  Cómo nace CoWorkPlace</h3>
+                <p>CoWorkPlace nace de la necesidad de muchas de las empresas que se vieron obligadas a cerrar por la pandemia, y otras que están en teletrabajo. Algunas empresas que continúan carecen de un espacio físico para reuniones que son esenciales de carácter presencial, ya sea con proveedores, clientes o con los empleados. Coworking es una plataforma en línea que le brindará alternativas de solución para las reuniones presenciales, aportando espacios, mobiliario, equipos tecnológicos requeridos; según la necesidad de la empresa y el número de asistentes.
+                <h3><span>* </span>  Socios</h3>
+                <p><strong>Diana Carolina Valbuena Delgado</strong>, Ing. Sistemas, Desarrolladora junior<br>
+                <strong>Gilson Dukquerio Aranda Ciprian</strong>, Ing. Electrónico, Desarrollador junior <br>
+                <strong>Ferney Francisco Roa Huertas</strong>, Licenciado en Matemáticas, Desarrollador junior <br>
+                <strong>Miller Alexander Quiroga Campos</strong>, Ing. Electrónico y Matemático, Desarrollador junior</p>
+                
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

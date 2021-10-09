@@ -1,0 +1,55 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<main> <!-- Formulario de Renta -->
+    <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Alquiler - Renta</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="{% static 'img/ilu1.svg'%}" alt="" class="imagen-about-us" >
+            
+            <div class="card">
+                <div class="card-body">
+                    <div class="form">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Selecciona tu ubicación de preferencia</option>
+                            <option value="1">Norte</option>
+                            <option value="2">Centro</option>
+                            <option value="3">Oriente</option>
+                        </select>
+                        
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-sm example">
+                            <option selected>Selecciona puesto o sala de trabajo</option>
+                            <option value="1">Puesto</option>
+                            <option value="2">Sala</option>
+                        </select>
+                        
+                        <div align="center">
+                            <input type="datetime-local" name="fechcita" list="listafechascita"> <br> <br>
+                        </div>
+                        <form>
+                            <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <!--<div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div> -->
+                            <button type="submit" class="btn btn-primary">Reservar</button>
+                        </form>
+                        <br>
+                        <a href="/reservauser" class="btn btn-secondary">Consultar reservas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<main>
+    <!-- Creamos la oferta de coWork -->
+    <section class=" contenedor container-fluid">
+        <h2 class="titulo">Usuario: <strong>Camila Riaño</strong></h2>
+        <table class="table caption-top">
+            <caption>Lista de reservas</caption>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Lugar</th>
+                    <th scope="col">Fecha inicio reserva</th>
+                    <th scope="col">Fecha final reserva</th>
+                    <th scope="col">Pago</th>
+                    <th scope="col">Estado</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>CoWork Norte - Puesto 2</td>
+                    <td>2021-10-07</td>
+                    <td>2021-10-08</td>
+                    <td>
+                        <Button class="btn btn-primary">PAGAR</Button>
+                    </td>
+                    <td>Activo</td>
+                    <td>
+                        <Button class="btn btn-secondary">Modificar</Button>&nbsp; <button class="btn btn-danger">Cancelar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>CoWork Norte - Sala 1</td>
+                    <td>2021-11-12</td>
+                    <td>2021-11-14</td>
+                    <td><button class="btn btn-primary" disabled="disabled">PAGADO</button></td>
+                    <td>Activo</td>
+                    <td>
+                        <Button class="btn btn-secondary" disabled="disabled">Modificar</Button>&nbsp; <button class="btn btn-danger">Cancelar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+{% endblock %}

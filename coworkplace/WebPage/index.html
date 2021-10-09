@@ -1,0 +1,135 @@
+{% extends "header.html" %}
+
+{% load static %}
+
+{% block content %}
+<main> <!-- Creamos la oferta de coWork -->
+    <section class="contenedor sobre-nosotros">
+        <h2 class="titulo">Nuestros servicios</h2>
+        <div class="contenedor-sobre-nosotros">
+            <img src="{% static 'img/ilustracion2.svg'%}" alt="" class="imagen-about-us">
+            <div class="contenido-textos">
+                <h3><span>1 </span>  Puestos de trabajo</h3>
+                <p>Ofrecemos un espacio de trabajo individual o en un ambiente compartido, totalmente equipado (internet por cable o wifi, punto de alimentación de energía eléctrica, servicio de impresion, servicio de cafetería, servicio de baño).</p> 
+                <p>Puede reservar su puesto de trabajo todos los días, por horas en cualquiera de nuestras ubicaciones.</p>
+                <h3><span>2 </span>  Salas de reuniones</h3>
+                <p>Salas privadas, en donde podrá trabajar con sus colegas, intercambiar ideas, realizar conferencias y capacitaciones. Salas totalmente equipada (internet por cable o wifi, videobeam, punto de alimentación de energía eléctrica, servicio de impresion, servicio de cafetería, servicio de baño).</p>
+                <p>Puede reservar sus salas de trabajo todos los días, por horas en cualquiera de nuestras ubicaciones.</p>
+            </div>
+        </div>
+    </section>
+    <section class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo">Portafolio</h2> <!-- PORTAFOLIO - Imagenes de nuestros servicios -->
+            <div class="galeria-port">
+                <div class="imagen-port">
+                    <img src="{% static 'img/puesto1.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestros puestos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/puesto2.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestros puestos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/img4.jpg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestros puestos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/img1.jpg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestros puestos</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/sala1.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestras salas</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/sala2.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestras salas</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/sala3.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestras salas</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="{% static 'img/sala4.jpeg'%}" alt="">
+                    <div class="hover-galeria">
+                        <img src="{% static 'img/icono1.png'%}" alt="">
+                        <p>Nuestras salas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clientes contenedor"> <!-- COMENTARIOS - Qué dicen los clientes acerca de nosotros -->
+        <h2 class="titulo">Que dicen nuestros clientes</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="{% static 'img/person2.jpeg'%}" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Cliente 1</h4>
+                    <ul>
+                        <li>Ubicacion -- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, dolorum.</li>
+                        <li>Sitio de trabajo -- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, dolorum</li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/person1.jpeg'%}" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Cliente 2</h4>
+                    <ul>
+                        <li>Ubicacion -- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, dolorum.</li>
+                        <li>Sitio de trabajo -- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, dolorum</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-services"> <!-- Servicios Adicionales-->
+        <div class="contenedor">
+            <h2 class="titulo">Servicios Adicionales</h2>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <img src="{% static 'img/ilu2.svg'%}" alt="">
+                    <h3>Parqueadero</h3>
+                    <p>Se cuenta con sitio de parqueadero para automovil, motocicletea y bicicleta</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="{% static 'img/ilu1.svg'%}" alt="">
+                    <h3>Cafetería</h3>
+                    <p>Se ofrece servicio de cafetería, combo de snaks</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="{% static 'img/ilu3.svg'%}" alt="">
+                    <h3>Desinfección y Baños</h3>
+                    <p>Lugares de desinfección y baños</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock %}
